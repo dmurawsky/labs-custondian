@@ -1,3 +1,0 @@
-2017-02-21 10:30:00,494 - custodian.policy - INFO - Running policy account-service-limits resource: account region:default c7n:0.8.23.0
-2017-02-21 10:31:47,978 - custodian.policy - INFO - Running policy account-service-limits resource: account region:us-east-1 c7n:0.8.23.0
-2017-02-21 10:31:50,630 - custodian.policy - INFO - policy: account-service-limits resource:account has count:1 time:2.65
