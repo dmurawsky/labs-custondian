@@ -1,0 +1,24 @@
+policies:
+  - name: remove-old-cfn-stacks
+    resource: cfn
+    filters:
+      - type: age
+        days: 2
+        op: ge
+    actions:
+      - delete
+  - name: terminate-old-instances
+    resource: ec2
+    filters:
+      - type: instance-age
+        days: 2
+        op: ge
+    actions:
+      - terminate
+  - name: delete-unused-ebs-volumes
+    resource: ebs
+    filters:
+      - Attachments: []
+      - State: available
+    actions:
+      - delete
